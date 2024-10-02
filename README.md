@@ -1,48 +1,27 @@
 # CorporationX
 
-Репозиторий для всего проекта. Использует git submodule, чтобы включить все остальные сервисы
+I worked on this project with a team of 5 people. The project was written on a microservice architecture. The following is a description of the implemented features
 
-# Как начать работу?
+# My features
 
-`git clone --recurse-submodules https://github.com/CorporationX/CorporationX`
+## Used Minio (Amazon S3 compatible) to store user image in User Service.
+link: https://github.com/CorporationX/user_service/pull/1285/files#diff-38a41377204c067361cfe9ea7cfcacb929d371b2932d2e7bc87185ac621f7f2f
 
-# Как поднять БД и другие инструменты локально?
+## Integrated Google SMTP into Notification Service.
+link: https://github.com/CorporationX/notification_service/blob/notification-service-grisatkac/src/main/java/faang/school/notificationservice/service/notification/EmailService.java
 
-Следуем инструкциям в README в разделе `infra`. Это отдельный репозиторий, который содержит в себе все инфраструктурные компоненты (БД, Redis, Docker Compose и пр.)
+## Used Redis for data caching and publishing, event listener (Pub/Sub).
+link: https://github.com/CorporationX/post_service/blob/centaur-master-bc5/src/main/java/faang/school/postservice/publisher/PostLikePublisher.java, https://github.com/CorporationX/notification_service/blob/centaur-master-bc5/src/main/java/faang/school/notificationservice/listener/LikePostEventListener.java
 
-# Как вести разработку?
+## Implemented URL Shortener based on asynchronous cache to provide non-blocking handling of user requests.
+link: https://github.com/grisatkac/url_shortener_service/blob/url-shortner-service-grisatkac/src/main/java/faang/school/urlshortenerservice/service/UrlService.java
 
-Каждая папка в этом репозитории - это отдельный подрепозиторий, который тоже есть на GitHub. Т.е. user_service - это обычный Git-репозиторий, который попросту включен в большой репозиторий CorporationX в качестве подрепозитория. 
+## Implemented achievement feature
+publisher: https://github.com/CorporationX/achievement_service/blob/feature-BJS2-25799/src/main/java/faang/school/achievement/publisher/AbstractMessagePublisher.java
+consumer: https://github.com/CorporationX/achievement_service/blob/feature-BJS2-16049/src/main/java/faang/school/achievement/listener/PostEventListener.java
 
-CorporationX репозиторий существует лишь для удобства: можно сразу склонировать все необходимые сервисы всего одной командой `git clone`, которая указана выше.
-
-Каждый подрепозиторий представляет собой отдельный сервис (Java-приложение) в экосистеме CorporationX. Например, user_service - это приложение, которое содержит в себе логику работы с пользователями, project_service - логику работы с проектами и т.д. 
-Соответственно в зависимости от конкретной задачи вы будете работать либо в том, либо в другом сервисе. По сути просто писать там код, как в обычном проекте в IDEA.
-
-Поэтому:
-1. Выкачиваем весь проект CorporationX, используя команду клонирования выше
-2. Из конкретной задачи в Jira определяем, в каком сервисе нужно вести разработку.
-3. Открываем в IDEA папку с этим сервисом
-4. Работаемс!
-
-# Как создавать PR?
-
-Каждая команда будет иметь свою собственную master ветку в общем репозитории. Например, команда unicorn имеет ветку `master-unicorn`, которая содержит весь стабильный код этой команды в определенном сервисе, и именно туда участники должны создавать PR-ы.
-
-Поэтому:
-
-1. Получаем задачу в Jira
-2. Определяем, в каком сервисе будем вести разработку
-3. Открываем этот сервис в IDEA
-4. Переключаемся на `master`-ветку СВОЕЙ команды. ЭТО ОЧЕНЬ ВАЖНО. Если вы только начинаете разработку новой задачи, то убедитесь, что переключились на ветку `master-unicorn` или `master-kraken` в зависимости от вашей команды, перед тем, как создать еще одну ветку.
-5. Из данной ветки создаем ветку для вашей конкретной задачи по шаблону: `feature-{номер_задачи}` или `bugfix-{номер_задачи}` в зависимости от того, делаете ли вы новую фичу или чините некоторый баг.
-6. Именно в этой ветке ведем всю разработку
-7. Когда разработка завершена создаем PR из этой ветки в master-ветку вашей команды, из которой изначально и создавали рабочую ветку. Убедитесь, что всегда создаете PR в правильную ветку именно для вашей команды.
-8. Получам аппрув от техлида.
-9. Мержируемся!
-
-# Тесты
-
-Каждый PR в этом репозитории обязан содержать unit-тесты на всю вашу логику. PR-ы без unit-тестов будут отправлятся сразу обратно в работу без частичной проверки. Когда команда добавит CI пайплайны на GitHub, то PR-ы с упавшими тестами, будут также сразу отправляться обратно в работу без частичной проверки. 
-
-Ваш PR должен быть полностью зеленым и покрыт тестами, чтобы получить ревью. Это обязательное требование.
+## Participated in News Feed implementation using publishing and consuming events by Kafka and Redis.
+feed service: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/service/feed/FeedService.java
+publisher: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/publisher/kafka/PostLikeKafkaPublisher.java 
+consumer: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/consumer/kafka/LikePostConsumer.java, 
+cache: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/cache/AbstractCache.java
