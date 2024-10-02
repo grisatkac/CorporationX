@@ -18,10 +18,14 @@ link: https://github.com/grisatkac/url_shortener_service/blob/url-shortner-servi
 
 ## Implemented achievement feature
 publisher: https://github.com/CorporationX/achievement_service/blob/feature-BJS2-25799/src/main/java/faang/school/achievement/publisher/AbstractMessagePublisher.java
+
 consumer: https://github.com/CorporationX/achievement_service/blob/feature-BJS2-16049/src/main/java/faang/school/achievement/listener/PostEventListener.java
 
 ## Participated in News Feed implementation using publishing and consuming events by Kafka and Redis.
 feed service: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/service/feed/FeedService.java
+
 publisher: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/publisher/kafka/PostLikeKafkaPublisher.java 
+
 consumer: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/consumer/kafka/LikePostConsumer.java, 
+
 cache: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/cache/AbstractCache.java
