@@ -13,11 +13,11 @@ consumer: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/s
 
 cache: https://github.com/CorporationX/post_service/blob/feature-BJS2-27931/src/main/java/faang/school/postservice/cache/AbstractCache.java
 ## Developed URL Shortener based on asynchronous cache to provide non-blocking handling of user requests.
-link: https://github.com/grisatkac/
+link: https://github.com/grisatkac/url_shortener_service/blob/url-shortner-service-grisatkac/src/main/java/faang/school/urlshortenerservice/service/UrlService.java
 
 ## Used Redis for data caching and publishing, event listener (Pub/Sub).
 link: https://github.com/CorporationX/post_service/blob/centaur-master-bc5/src/main/java/faang/school/postservice/publisher/PostLikePublisher.java, https://github.com/CorporationX/notification_service/blob/centaur-master-bc5/src/main/java/faang/school/notificationservice/listener/LikePostEventListener.java
-url_shortener_service/blob/url-shortner-service-grisatkac/src/main/java/faang/school/urlshortenerservice/service/UrlService.java
+
 
 ## Implemented achievement feature
 publisher: https://github.com/CorporationX/achievement_service/blob/feature-BJS2-25799/src/main/java/faang/school/achievement/publisher/AbstractMessagePublisher.java
