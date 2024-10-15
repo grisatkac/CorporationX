@@ -1,6 +1,6 @@
 # CorporationX
 
-I worked on this project with a team of 5 people. The project was written on a microservice architecture. The following is a description of the implemented features
+I worked on this project with a team of 10+ people. The project was written on a microservice architecture. The following is a description of the implemented features
 
 # My features
 
