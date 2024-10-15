@@ -28,7 +28,7 @@ consumer: https://github.com/CorporationX/achievement_service/blob/feature-BJS2-
 
 
 ## Used Minio (Amazon S3 compatible) to store user image in User Service.
-link: https://github.com/CorporationX/user_service/pull/1285/files#diff-38a41377204c067361cfe9ea7cfcacb929d371b2932d2e7bc87185ac621f7f2f
+link: [https://github.com/CorporationX/user_service/pull/1285/files#diff-38a41377204c067361cfe9ea7cfcacb929d371b2932d2e7bc87185ac621f7f2f](https://github.com/CorporationX/user_service/blob/centaur-master-bc5/src/main/java/school/faang/user_service/service/s3Service/S3Service.java)
 
 ## Integrated Google SMTP into Notification Service.
 link: https://github.com/CorporationX/notification_service/blob/notification-service-grisatkac/src/main/java/faang/school/notificationservice/service/notification/EmailService.java
